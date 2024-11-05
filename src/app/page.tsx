@@ -1,4 +1,3 @@
-import { Carousel } from "@/components/ui/apple-cards-carousel";
 import AboutMe from "../components/aboutme/page";
 import Experience from "../components/experience/page";
 import Footer from "../components/footer/page";
@@ -21,7 +20,6 @@ function App() {
         <div className="pt-5">
           <Form />
           <Footer />
-          <Carousel items={[]} />
         </div>
       </>
     </section>
