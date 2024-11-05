@@ -27,12 +27,12 @@ const Jumbotron: React.FC = () => {
   return (
     <section
       id="Home"
-      className="bg-gray-800 px-4 py-10 text-white sm:px-4 md:px-4 md:py-24 lg:px-16"
+      className=" from-gray-900 bg-gray-800 px-4 py-10 text-white sm:px-4 md:px-4 md:py-24 lg:px-16"
     >
       <div className="container mx-auto grid grid-cols-1 items-center gap-20 md:grid-cols-2">
         {/* Text Section */}
         <div>
-          <TypewriterEffect words={words} className="mb-7 text-left" />{" "}
+          <TypewriterEffect words={words} className="mb-7 text-left" />
           <p className="mb-6 transition-opacity duration-300 ease-in-out hover:opacity-75">
             I'm a dedicated web developer with a background in construction and
             agriculture from my time in Japan. Fluent in Japanese, I returned to
@@ -46,9 +46,10 @@ const Jumbotron: React.FC = () => {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="rounded-full bg-blue-500 px-6 py-2 text-white transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-yellow-600"
+            className="relative inline-flex items-center rounded-full bg-gradient-to-r from-blue-500 to-teal-400 px-6 py-2 text-white transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-gradient-to-l hover:from-yellow-500 hover:to-orange-500"
           >
             Hire Me
+            <span className="absolute inset-0 rounded-full opacity-25 bg-blue-500 blur-md"></span>
           </button>
           {/* Social Media Links */}
           <div className="mt-6 flex space-x-4">
@@ -88,17 +89,19 @@ const Jumbotron: React.FC = () => {
         </div>
 
         {/* Image Section with BackgroundGradient */}
-        <BackgroundGradient containerClassName="relative h-80 w-full md:h-[500px]">
+        <BackgroundGradient containerClassName="relative h-80 w-full md:h-[500px] overflow-hidden rounded-3xl shadow-2xl">
           <div className="relative z-10 h-80 w-full md:h-[492px]">
             <Image
               src={kereta}
               alt="Background Banner"
               className={cn(
                 "inset-0 h-full w-full object-cover transition-transform duration-300 ease-in-out",
-                "rounded-3xl hover:scale-105"
+                "rounded-3xl hover:scale-110"
               )}
             />
           </div>
+          {/* Overlay Effect */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-60 rounded-3xl"></div>
         </BackgroundGradient>
       </div>
     </section>

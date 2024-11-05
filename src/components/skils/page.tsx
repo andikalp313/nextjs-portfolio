@@ -2,6 +2,7 @@
 
 import React from "react";
 import { BackgroundGradient } from "../ui/background-gradient";
+import { motion } from "framer-motion";
 
 const Skills: React.FC = () => {
   const skills = [
@@ -63,11 +64,15 @@ const Skills: React.FC = () => {
 
           <div className="mx-auto grid grid-cols-1 gap-10 sm:grid-cols-2 md:max-w-7xl lg:grid-cols-3">
             {skills.map((skill, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="overflow-hidden rounded-lg bg-gray-900 p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl"
+                initial={{ opacity: 0, scale: 0.95 }} // Initial state
+                animate={{ opacity: 1, scale: 1 }} // Animate to this state
+                transition={{ duration: 0.3 }} // Transition duration
+                whileHover={{ scale: 1.05 }} // Scale up on hover
               >
-                <h3 className="mb-2 text-xl font-semibold text-blue-500  hover:from-yellow-400 hover:to-blue-500">
+                <h3 className="mb-2 text-xl font-semibold text-blue-500">
                   {skill.title}
                 </h3>
 
@@ -76,7 +81,7 @@ const Skills: React.FC = () => {
                   <span className="font-semibold">Tools: </span>
                   {skill.tools}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

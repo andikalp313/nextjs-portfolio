@@ -1,6 +1,7 @@
 "use client";
 
 import { BackgroundGradient } from "../ui/background-gradient";
+import { motion } from "framer-motion";
 
 const Experience: React.FC = () => {
   const experiences = [
@@ -49,7 +50,21 @@ const Experience: React.FC = () => {
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {experiences.map((experience, index) => (
           <BackgroundGradient key={index} className="pt-5">
-            <div className="overflow-hidden rounded-3xl bg-gray-900 p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl">
+            <motion.div
+              className="overflow-hidden rounded-3xl bg-gray-900 p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl"
+              initial={{ opacity: 0, scale: 0.9 }} // Initial state
+              animate={{ opacity: 1, scale: 1 }} // Animate to this state
+              transition={{ duration: 0.5, ease: "easeInOut" }} // Transition duration
+              whileHover={{
+                scale: 1.1, // Scale up on hover
+                rotate: 5, // Rotate slightly on hover
+                backgroundColor: "rgba(0, 0, 255, 0.1)", // Change background color on hover
+                boxShadow: "0 10px 20px rgba(255, 255, 255, 0.4)", // Add a stronger shadow on hover
+              }}
+              whileTap={{
+                scale: 0.95, // Scale down on tap (mobile)
+              }}
+            >
               <h3 className="mb-2 text-xl font-semibold text-blue-500 hover:text-yellow-400">
                 {experience.title}
               </h3>
@@ -60,7 +75,7 @@ const Experience: React.FC = () => {
                 <span className="font-semibold">Tools: </span>
                 {experience.tools}
               </p>
-            </div>
+            </motion.div>
           </BackgroundGradient>
         ))}
       </div>
