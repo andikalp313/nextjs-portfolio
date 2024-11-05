@@ -13,7 +13,7 @@ const Portfolio: React.FC = () => {
       title: "Responsive Web Application",
       description:
         "Developed a fully responsive e-commerce platform using React and Tailwind CSS, with dynamic product listings and a custom shopping cart.",
-      techStack: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
+      techStack: ["React", "Tailwind CSS", "Next.js", "typescript"],
       image: gambar1,
       alt: "Responsive Web Application",
     },
@@ -29,7 +29,7 @@ const Portfolio: React.FC = () => {
       title: "Portfolio Website",
       description:
         "Designed and developed my personal portfolio to showcase projects and skills, with a clean UI built using Next.js and styled-components.",
-      techStack: ["Next.js", "Styled-Components", "JavaScript"],
+      techStack: ["Next.js", "Styled-Components", "Typescript"],
       image: gambar3,
       alt: "Portfolio Website",
     },
