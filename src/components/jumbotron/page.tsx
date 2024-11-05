@@ -4,7 +4,7 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa6";
 import { cn } from "../../lib/utils";
 import { BackgroundGradient } from "../ui/background-gradient"; // Pastikan path-nya benar
-import kereta from "../../assets/kereta.jpeg";
+import kereta from "../../public/kereta.jpeg";
 import { TypewriterEffect } from "../ui/typewriter-effect";
 import Image from "next/image";
 

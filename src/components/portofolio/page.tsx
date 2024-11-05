@@ -1,9 +1,9 @@
 "use client";
 
-import gambar1 from "../../assets/website.png";
+import gambar1 from "../../public/website.png";
 import { BackgroundGradient } from "../ui/background-gradient";
-import gambar2 from "../../assets/chat.png";
-import gambar3 from "../../assets/portofolio.png";
+import gambar2 from "../../public/chat.png";
+import gambar3 from "../..//public/portofolio.png";
 import Image from "next/image";
 
 const Portfolio: React.FC = () => {

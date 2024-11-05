@@ -1,6 +1,6 @@
 "use client";
 
-import konstruksi from "../../assets/konstruksi.jpeg";
+import konstruksi from "../..//public/konstruksi.jpeg";
 import { cn } from "../../lib/utils";
 
 import { BackgroundGradient } from "../ui/background-gradient";
